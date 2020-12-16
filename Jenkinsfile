@@ -1,5 +1,9 @@
 pipeline {
     agent { docker { image 'python:3.5.1' } }
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+    }
     stages {
         stage('HELLO WORLD') {
             steps {
@@ -10,6 +14,7 @@ pipeline {
 	stage('RUN LOCAL SCRIPT') {
 		steps {
 			sh 'bash ./test_bash_script.sh'
+			echo 'Database engine is ${DB_ENGINE}'
 		}
 	}
     }
