@@ -14,7 +14,7 @@ pipeline {
 	stage('RUN LOCAL SCRIPT') {
 		steps {
 			sh 'bash ./test_bash_script.sh'
-			echo 'Database engine is ${DB_ENGINE}'
+			echo "Database engine is ${DB_ENGINE}"
 		}
 	}
     }
