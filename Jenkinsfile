@@ -9,7 +9,7 @@ pipeline {
 
 	stage('RUN LOCAL SCRIPT') {
 		steps {
-			sh './test_bash_script.sh'
+			sh 'bash ./test_bash_script.sh'
 		}
 	}
     }
