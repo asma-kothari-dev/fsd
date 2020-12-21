@@ -23,8 +23,10 @@ pipeline {
 	}
 
 	stage('Demo Step of Jenkins pipeline') {
-     		echo 'Hello world'
-     		sayHello 'Dave'
+		steps {
+			echo 'Hello world'
+			sayHello 'Dave'
+		}
  	}
 
     }
