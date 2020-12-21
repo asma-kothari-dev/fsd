@@ -20,6 +20,13 @@ pipeline {
 		}
 	}
 
+	stage('Shared library steps of Jenkins pipeline') {
+		steps {
+			echo 'Goodbye world'
+			sayHello 'Dave Dave'
+		}
+ 	}
+
 	stage('EXTRA STAGE IN INTERNAL DIRECTORY OF SCRIPT') {
 		steps {
 			echo "Database engine being printed in internal script is ${DB_ENGINE}"
