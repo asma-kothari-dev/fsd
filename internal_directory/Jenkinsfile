@@ -23,7 +23,7 @@ pipeline {
 	stage('Shared library steps of Jenkins pipeline') {
 		steps {
 			echo 'Goodbye world'
-			sayHello 'Dave Dave'
+			sayHelloWorld 'Dave's World'
 		}
  	}
 
