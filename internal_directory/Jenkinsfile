@@ -1,3 +1,5 @@
+@Library('pipeline-same-repo-library-demo')_
+
 pipeline {
     agent { docker { image 'python:3.5.1' } }
     environment {
