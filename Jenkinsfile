@@ -1,3 +1,7 @@
+libraries {
+     lib('pipeline-library-demo')
+}
+
 pipeline {
     agent { docker { image 'python:3.5.1' } }
     environment {
@@ -17,6 +21,12 @@ pipeline {
 			echo "Database engine is ${DB_ENGINE}"
 		}
 	}
+
+	stage('Demo Step of Jenkins pipeline') {
+     		echo 'Hello world'
+     		sayHello 'Dave'
+ 	}
+
     }
 
     post {
