@@ -27,6 +27,12 @@ pipeline {
 		}
  	}
 
+	stage('For demoing jenkins to Asma') {
+		steps {
+			echo 'DEMOING JENKINS TO ASMA'
+		}
+	}
+
 	stage('EXTRA STAGE IN INTERNAL DIRECTORY OF SCRIPT') {
 		steps {
 			echo "Database engine being printed in internal script is ${DB_ENGINE}"
